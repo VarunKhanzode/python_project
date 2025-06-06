@@ -1,2 +1,0 @@
-22728 - 2025-06-06 19:32:26,972 - app.main - SportsAPP - E:\py_project\fitness_booking_api\app\apis\classes\control.py - control - add_classes - 66- ERROR - Not naive datetime (tzinfo is already set)
-22728 - 2025-06-06 19:33:37,445 - app.main - SportsAPP - E:\py_project\fitness_booking_api\app\apis\classes\control.py - control - add_classes - 66- ERROR - 400: Zumba class already exists at that time.
