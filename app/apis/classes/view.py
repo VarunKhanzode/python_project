@@ -1,4 +1,4 @@
-from fastapi import APIRouter, Depends
+from fastapi import APIRouter, Depends, Query
 from sqlalchemy.orm import Session
 from app.database.database import get_db
 from app.schemas import schemas
@@ -13,5 +13,6 @@ def add_multiple_classes(payload: List[schemas.CreateClass], db: Session = Depen
     return add_classes(db, payload)
 
 @router.get("/classes", response_model=list[schemas.ClassResponse], description="This API will provide all available classes")
-def read_classes(db: Session = Depends(get_db)):
-    return get_all_classes(db)
+def read_classes(db: Session = Depends(get_db), 
+                 timezone: str = Query(default="Asia/Kolkata", description="User timezone (e.g., America/New_York)")):
+    return get_all_classes(db, timezone)
