@@ -1,6 +1,11 @@
 create python environment and install requirements using below commands
 - python -m env venv
+- env\Scripts\activate (for windows)
+- env\bin\activate (for linux)
 - pip install requirements.txt
+
+run the application using command
+- python run.py
 
 access the swagger page to test the APIs at - http://127.0.0.1:8000/docs#/
 
